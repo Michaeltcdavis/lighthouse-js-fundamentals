@@ -1,0 +1,18 @@
+const loopyLighthouse = function (range, multiples, words) {
+  
+  for (let count = range[0]; count <= range[1]; count++) {
+    if (count % multiples[0] === 0) {
+      if (count % multiples[1] === 0) {
+        console.log(words[0]+words[1]);
+      } else {
+        console.log(words[0]);
+      }
+    } else if (count % multiples[1] === 0) {
+      console.log(words[1]);
+    } else {
+      console.log(count);
+    }
+  }
+}
+
+loopyLighthouse([15, 90], [2, 5], ["Batty", "Beacon"]);
